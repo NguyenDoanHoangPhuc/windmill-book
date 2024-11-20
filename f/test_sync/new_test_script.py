@@ -6,7 +6,7 @@ import wmill
 
 # you can use typed resources by doing a type alias to dict
 # postgresql = dict
-
+# redis = dict
 
 def main():
     return 1
