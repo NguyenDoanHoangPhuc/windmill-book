@@ -1,4 +1,4 @@
-summary: info_page_volunteer
+summary: info_page_organization
 value:
   css:
     agchartscomponent:
@@ -176,7 +176,7 @@ value:
         content: '!inline background_runnable_0.inline_script.py'
         lock: '!inline background_runnable_0.inline_script.lock'
         language: python3
-        path: f/info_page/info_page_volunteer/Background_Runnable_0
+        path: f/info_page/ii/Background_Runnable_0
         schema:
           $schema: 'https://json-schema.org/draft/2020-12/schema'
           type: object
@@ -244,7 +244,7 @@ value:
               - id: result
                 componentId: bg_0
             eval: 'Chào mừng, Hoàng Phúc Nguyễn Đoàn'
-            expr: '"Chào mừng, " + bg_0.result.full_name'
+            expr: '"Chào mừng, "+bg_0.result.name'
             fieldType: template
           configuration:
             copyButton:
@@ -324,7 +324,7 @@ value:
       - '12':
           fixed: false
           fullHeight: true
-          h: 16
+          h: 19
           w: 12
           x: 0
           'y': 5
@@ -1217,7 +1217,7 @@ value:
       - '12':
           fixed: false
           fullHeight: false
-          h: 10
+          h: 15
           w: 12
           x: 0
           'y': 0
@@ -1245,7 +1245,7 @@ value:
           h: 1
           w: 12
           x: 0
-          'y': 10
+          'y': 15
         '3':
           fixed: false
           fullHeight: false
@@ -1442,7 +1442,7 @@ value:
           componentInput:
             type: templatev2
             connections: []
-            eval: THÔNG TIN CÁ NHÂN
+            eval: THÔNG TIN TỔ CHỨC
             fieldType: template
           configuration:
             copyButton:
@@ -1494,7 +1494,7 @@ value:
               - id: result
                 componentId: bg_0
             eval: Hoàng Phúc Nguyễn Đoàn
-            expr: bg_0.result.full_name
+            expr: bg_0.result.name
             fieldType: template
           configuration:
             copyButton:
@@ -1524,59 +1524,9 @@ value:
           fixed: false
           fullHeight: false
           h: 1
-          w: 12
-          x: 0
-          'y': 2
-        '3':
-          fixed: false
-          fullHeight: false
-          h: 1
-          w: 1
-          x: 1
-          'y': 0
-        id: f
-        data:
-          id: f
-          type: textcomponent
-          actions: []
-          componentInput:
-            type: templatev2
-            connections: []
-            eval: 'Công việc: Tình nguyện viên'
-            fieldType: template
-          configuration:
-            copyButton:
-              type: static
-              value: false
-            disableNoText:
-              type: static
-              value: false
-            style:
-              type: static
-              value: Body
-            tooltip:
-              type: static
-              value: ''
-          customCss:
-            container:
-              class: ''
-              style: ''
-            text:
-              class: ''
-              style: |
-                font-size: 2vh;
-                font-style: bold;
-                 font-family: 'Montserrat', sans-serif;
-                color: grey;
-          horizontalAlignment: left
-          verticalAlignment: center
-      - '12':
-          fixed: false
-          fullHeight: false
-          h: 1
           w: 7
           x: 0
-          'y': 3
+          'y': 2
         '3':
           fixed: false
           fullHeight: false
@@ -1590,12 +1540,10 @@ value:
           type: textcomponent
           actions: []
           componentInput:
-            type: evalv2
-            connections:
-              - id: result
-                componentId: bg_0
-            eval: 'Giới tính: Nam'
-            expr: ' "Giới tính: "+ bg_0.result.gender_name'
+            type: templatev2
+            connections: []
+            eval: Miêu tả
+            expr: Miêu tả
             fieldType: template
           configuration:
             copyButton:
@@ -1606,7 +1554,7 @@ value:
               value: false
             style:
               type: static
-              value: Body
+              value: Subtitle
             tooltip:
               type: static
               value: ''
@@ -1625,10 +1573,59 @@ value:
       - '12':
           fixed: false
           fullHeight: false
+          h: 6
+          w: 12
+          x: 0
+          'y': 3
+        '3':
+          fixed: false
+          fullHeight: false
+          h: 1
+          w: 1
+          x: 1
+          'y': 0
+        id: f
+        data:
+          id: f
+          type: textcomponent
+          actions: []
+          componentInput:
+            type: evalv2
+            connections:
+              - id: result
+                componentId: bg_0
+            eval: 'Miêu tả: '
+            expr: bg_0.result.description
+            fieldType: template
+          configuration:
+            copyButton:
+              type: static
+              value: false
+            disableNoText:
+              type: static
+              value: false
+            style:
+              type: static
+              value: Body
+            tooltip:
+              type: static
+              value: ''
+          customCss:
+            container:
+              class: ''
+              style: 'overflow: hidden;'
+            text:
+              class: ''
+              style: 'text-align: justify;'
+          horizontalAlignment: left
+          verticalAlignment: top
+      - '12':
+          fixed: false
+          fullHeight: false
           h: 1
           w: 12
           x: 0
-          'y': 5
+          'y': 9
         '3':
           fixed: false
           fullHeight: false
@@ -1677,7 +1674,7 @@ value:
           h: 1
           w: 1
           x: 0
-          'y': 6
+          'y': 10
         '3':
           fixed: false
           fullHeight: false
@@ -1718,7 +1715,7 @@ value:
           h: 1
           w: 9
           x: 1
-          'y': 6
+          'y': 10
         '3':
           fixed: false
           fullHeight: false
@@ -1767,99 +1764,7 @@ value:
           h: 1
           w: 1
           x: 0
-          'y': 7
-        '3':
-          fixed: false
-          fullHeight: false
-          h: 3
-          w: 1
-          x: 2
-          'y': 1
-        id: bb
-        data:
-          id: bb
-          type: iconcomponent
-          actions: []
-          configuration:
-            color:
-              type: static
-              value: currentColor
-            icon:
-              type: evalv2
-              value: locate
-              connections: []
-              expr: '"map"'
-            size:
-              type: static
-              value: 24
-            strokeWidth:
-              type: static
-              value: 2
-          customCss:
-            container:
-              class: ''
-              style: ''
-            icon:
-              class: ''
-              style: ''
-          horizontalAlignment: center
-          verticalAlignment: center
-      - '12':
-          fixed: false
-          fullHeight: false
-          h: 1
-          w: 9
-          x: 1
-          'y': 7
-        '3':
-          fixed: false
-          fullHeight: false
-          h: 1
-          w: 1
-          x: 0
-          'y': 2
-        id: ba
-        data:
-          id: ba
-          type: textcomponent
-          actions: []
-          componentInput:
-            type: evalv2
-            connections:
-              - id: result
-                componentId: bg_0
-            eval: hoangphuc090104@gmail.com
-            expr: bg_0.result.provinces_name
-            fieldType: template
-          configuration:
-            copyButton:
-              type: static
-              value: false
-            disableNoText:
-              type: static
-              value: false
-            style:
-              type: static
-              value: Body
-            tooltip:
-              type: static
-              value: ''
-          customCss:
-            container:
-              class: ''
-              style: ''
-            text:
-              class: ''
-              style: ''
-          horizontalAlignment: left
-          verticalAlignment: center
-      - '12':
-          fixed: false
-          fullHeight: false
-          h: 1
-          w: 1
-          x: 0
-          'y': 8
+          'y': 11
         '3':
           fixed: false
           fullHeight: false
@@ -1902,7 +1807,7 @@ value:
           h: 1
           w: 9
           x: 1
-          'y': 8
+          'y': 11
         '3':
           fixed: false
           fullHeight: false
@@ -1945,11 +1850,195 @@ value:
               style: ''
           horizontalAlignment: left
           verticalAlignment: center
+      - '12':
+          fixed: false
+          fullHeight: false
+          h: 1
+          w: 1
+          x: 0
+          'y': 12
+        '3':
+          fixed: false
+          fullHeight: false
+          h: 3
+          w: 1
+          x: 2
+          'y': 1
+        id: bb
+        data:
+          id: bb
+          type: iconcomponent
+          actions: []
+          configuration:
+            color:
+              type: static
+              value: currentColor
+            icon:
+              type: evalv2
+              value: locate
+              connections: []
+              expr: '"map"'
+            size:
+              type: static
+              value: 24
+            strokeWidth:
+              type: static
+              value: 2
+          customCss:
+            container:
+              class: ''
+              style: ''
+            icon:
+              class: ''
+              style: ''
+          horizontalAlignment: center
+          verticalAlignment: center
+      - '12':
+          fixed: false
+          fullHeight: false
+          h: 1
+          w: 9
+          x: 1
+          'y': 12
+        '3':
+          fixed: false
+          fullHeight: false
+          h: 1
+          w: 1
+          x: 0
+          'y': 2
+        id: ba
+        data:
+          id: ba
+          type: textcomponent
+          actions: []
+          componentInput:
+            type: evalv2
+            connections:
+              - id: result
+                componentId: bg_0
+            eval: hoangphuc090104@gmail.com
+            expr: bg_0.result.full_name
+            fieldType: template
+          configuration:
+            copyButton:
+              type: static
+              value: false
+            disableNoText:
+              type: static
+              value: false
+            style:
+              type: static
+              value: Body
+            tooltip:
+              type: static
+              value: ''
+          customCss:
+            container:
+              class: ''
+              style: ''
+            text:
+              class: ''
+              style: ''
+          horizontalAlignment: left
+          verticalAlignment: center
+      - '12':
+          fixed: false
+          fullHeight: false
+          h: 1
+          w: 1
+          x: 0
+          'y': 13
+        '3':
+          fixed: false
+          fullHeight: false
+          h: 3
+          w: 1
+          x: 2
+          'y': 4
+        id: bf
+        data:
+          id: bf
+          type: iconcomponent
+          actions: []
+          configuration:
+            color:
+              type: static
+              value: currentColor
+            icon:
+              type: static
+              value: map-pin
+              connections: []
+              expr: '"map"'
+            size:
+              type: static
+              value: 24
+            strokeWidth:
+              type: static
+              value: 2
+          customCss:
+            container:
+              class: ''
+              style: ''
+            icon:
+              class: ''
+              style: ''
+          horizontalAlignment: center
+          verticalAlignment: center
+      - '12':
+          fixed: false
+          fullHeight: false
+          h: 1
+          w: 9
+          x: 1
+          'y': 13
+        '3':
+          fixed: false
+          fullHeight: false
+          h: 1
+          w: 1
+          x: 1
+          'y': 3
+        id: be
+        data:
+          id: be
+          type: textcomponent
+          actions: []
+          componentInput:
+            type: evalv2
+            connections:
+              - id: result
+                componentId: bg_0
+            eval: hoangphuc090104@gmail.com
+            expr: bg_0.result.address
+            fieldType: template
+          configuration:
+            copyButton:
+              type: static
+              value: false
+            disableNoText:
+              type: static
+              value: false
+            style:
+              type: static
+              value: Body
+            tooltip:
+              type: static
+              value: ''
+          customCss:
+            container:
+              class: ''
+              style: ''
+            text:
+              class: ''
+              style: ''
+          horizontalAlignment: left
+          verticalAlignment: center
     k-0:
       - '12':
           fixed: false
           fullHeight: false
-          h: 22
+          h: 26
           w: 12
           x: 0
           'y': 0
@@ -3611,7 +3700,7 @@ policy:
   execution_mode: publisher
   s3_inputs: []
   triggerables_v2:
-    'bg_0:rawscript/cf406af75cca1eb66444b3aa27e972e90040a0eb664b7d5f28258bae50d28ec7':
+    'bg_0:rawscript/ffc37aa1821c22dec6ad8c350bcdc46e845e509d23c3da1af0e67aa70689262f':
       allow_user_resources: []
       one_of_inputs: {}
       static_inputs: {}
