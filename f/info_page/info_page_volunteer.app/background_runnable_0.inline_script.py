@@ -18,6 +18,9 @@ def main():
 
     response = supabase.table("provinces").select("*").eq("code", volunteer_data['id_provinces']).execute()
     provinces_data = response.data[0]
+    provinces_data["provinces_name"] = provinces_data["full_name"]
+    del provinces_data["full_name"]
 
-    result = {**account_data, **volunteer_data, **gender_data, **provinces_data}
+
+    result = {**volunteer_data, **gender_data, **provinces_data, **account_data}
     return result
