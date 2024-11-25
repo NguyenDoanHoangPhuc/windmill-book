@@ -1,9 +1,0 @@
-summary: Supabase Fetch Data
-description: ''
-lock: '!inline f/test_sync/sturdy_script.script.lock'
-kind: script
-schema:
-  $schema: 'https://json-schema.org/draft/2020-12/schema'
-  type: object
-  properties: {}
-  required: []

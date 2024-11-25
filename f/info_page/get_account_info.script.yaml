@@ -1,0 +1,26 @@
+summary: get accounts info
+description: ''
+lock: '!inline f/info_page/get_account_info.script.lock'
+kind: script
+schema:
+  $schema: 'https://json-schema.org/draft/2020-12/schema'
+  type: object
+  properties:
+    account_id:
+      type: integer
+      description: ''
+      default: null
+    key:
+      type: string
+      description: ''
+      default: null
+      originalType: string
+    url:
+      type: string
+      description: ''
+      default: null
+      originalType: string
+  required:
+    - url
+    - key
+    - account_id

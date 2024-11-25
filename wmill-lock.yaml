@@ -1,4 +1,3 @@
 locks:
-  f/test_sync/new_test_script: 3bcce9b41e4eb1a5dd48d9e6ef8971d5b6bf9bf852df8416859f14cfad0dfe9c
-  f/test_sync/python_script: cfc5f06a916c20fac2c4c5a7a7d16175ca880b2708db5fc06e5f8187f883fcc3
-  f/test_sync/sturdy_script: e8824fc97e35982b17691ac3a6c2d6e6fbcaa8c2661f18366bfb9dedcb893248
+  f/info_page/get_account_info: 851954e60f2e5bb392eea2a661b78e55f3fc91f3d262992d264aef494a2df0ec
+  u/hoangphuc090104/adaptive_script: 6ed3e22fa7543a7104f5175fbfd581366e77dd2d258c6fa6224a612f4d263567
